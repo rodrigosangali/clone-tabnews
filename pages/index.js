@@ -1,5 +1,10 @@
 function Home () {
-    return <h1> Viver não é dificil, mas da um certo trabalho</h1>
+ return (
+    <div>
+      <h1>Pekelucha, meu primeiro pedaço de internet dedico a voce</h1>
+      <img src="/image.gif" alt="GIF Exemplo" />
+    </div>
+  );
 }
 
 export default Home;
