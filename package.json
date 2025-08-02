@@ -2,7 +2,10 @@
   "name": "clone-tab-news",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {"dev": "next dev"
+  "scripts": {
+    "dev": "next dev",
+    "lint:check": "prettier --check .",
+    "lint:fix": " prettier --write ."
   },
   "author": "",
   "license": "MIT",
@@ -11,5 +14,8 @@
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
   }
 }
