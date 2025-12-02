@@ -15,8 +15,3 @@ test("GET to /api/v1/status should return 200", async () => {
   expect(responseBody.depedencies.database.used_connections).toEqual(1)
 
 });
-
-test.only("Acessar o banco de dados por inject Sql", async () => {
-  // await fetch("http://localhost:3000/api/v1/status?databaseName=local_db");
-  await fetch("http://localhost:3000/api/v1/status?databaseName='; SELECT pg_sleep(1); --");
-});

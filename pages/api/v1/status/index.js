@@ -12,14 +12,13 @@ async function status(request, response) {
   const maxConnectionsResult = await database.query("SHOW max_connections")
   const max_connections = maxConnectionsResult.rows[0].max_connections
 
-  const databaseName = request.query.databaseName;
+  const databaseName = process.env.POSTGRES_DB
   console.log(`Banco de dados selecionado : ${databaseName}`)
-  // Não é igual o java que soma string com +
-  //const usedConnetionsResult = await database.query("SELECT count(*)::int FROM pg_stat_activity WHERE datname ='" + databaseName + "';")
-  // Utilizando place holder
-  // const usedConnetionsResult = await database.query(`SELECT count(*)::int FROM pg_stat_activity WHERE datname = '${databaseName}';`)
 
-  const usedConnetionsResult = await database.query(`SELECT count(*)::int FROM pg_stat_activity WHERE datname = '${databaseName}';`)
+  const usedConnetionsResult = await database.query({
+    text: "SELECT count(*)::int FROM pg_stat_activity WHERE datname = $1;",
+    values: [databaseName],
+  });
 
   const usedConnetions = usedConnetionsResult.rows[0].count
 
