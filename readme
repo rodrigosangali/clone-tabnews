@@ -2,6 +2,9 @@ Rodar Local:
 No terminal executar o comando abaixo,
 npm run dev
 
+#Projeto utiliza:
+Migrations
+
 # Para rodar local ainda deve executar npm run dev
 O comando executará o arquivo YAML do Docker Compose
  localizado na pasta infra, responsável por subir o banco de dados.
