@@ -3,10 +3,11 @@ import { join } from "node:path"
 import database from "infra/database";
 
 export default async function migrations(request, response) {
-  const dbClient = await database.getNewClient()
+  const dbClient = await database.getNewClient();
+
   const defaultMigrationOptins = {
     dbClient: dbClient,
-    dryRun: false,
+    dryRun: true,
     dir: join("infra", "migrations"),
     direction: "up",
     verbose: true,
