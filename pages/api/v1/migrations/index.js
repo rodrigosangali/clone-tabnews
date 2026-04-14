@@ -6,7 +6,7 @@ export default async function migrations(request, response) {
   const dbClient = await database.getNewClient()
   const defaultMigrationOptins = {
     dbClient: dbClient,
-    dryRun: true,
+    dryRun: false,
     dir: join("infra", "migrations"),
     direction: "up",
     verbose: true,
