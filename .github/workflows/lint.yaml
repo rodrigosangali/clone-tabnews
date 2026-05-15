@@ -4,10 +4,10 @@ on: pull_request
 
 jobs:
   lint:
-    name: Lint 
+    name: Lint
     runs-on: ubuntu-latest
 
-    steps:  
+    steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -17,5 +17,3 @@ jobs:
       - run: npm ci
 
       - run: npm run lint:prettier:check
-
-   

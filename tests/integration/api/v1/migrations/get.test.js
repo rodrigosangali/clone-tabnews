@@ -3,10 +3,9 @@ import orchestrator from "tests/orchestrator";
 
 // console.log("query no banco:", database.query("SELECT 1+1;"));
 
-
 beforeAll(async () => {
   await orchestrator.waitForAllServices();
-  await database.query("drop schema public cascade; create schema public")
+  await database.query("drop schema public cascade; create schema public");
 });
 
 test("GET to /api/v1/migrations should return 200", async () => {
@@ -17,10 +16,11 @@ test("GET to /api/v1/migrations should return 200", async () => {
 
   expect(Array.isArray(responseBody)).toBe(true);
   expect(responseBody.length).toBeGreaterThan(0);
-  expect(responseBody).toEqual(expect.arrayContaining([
-    expect.objectContaining({
-      path: "infra/migrations/1770380448925_create-second-test.js"
-    })
-  ])
+  expect(responseBody).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        path: "infra/migrations/1770380448925_create-second-test.js",
+      }),
+    ]),
   );
 });
