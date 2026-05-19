@@ -5,7 +5,7 @@ function Home() {
         Todo aprendizado em 360, unindo a teoria de tudo para desenvolvimento
         humano
       </h1>
-      <img src="/dojo_cabana.png" alt="GIF Exemplo" />
+      <image src="/dojo_cabana.png" alt="GIF Exemplo" />
     </div>
   );
 }
