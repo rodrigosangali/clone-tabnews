@@ -6,13 +6,13 @@ npm run dev
 Migrations
 
 # Para rodar local ainda deve executar npm run dev
-O comando executará o arquivo YAML do Docker Compose
- localizado na pasta infra, responsável por subir o banco de dados.
 
- # A pasta pages, contém o index.html que é a pagina inicial, contém também as rotas da api onde acessa o banco de dados
+O comando executará o arquivo YAML do Docker Compose
+localizado na pasta infra, responsável por subir o banco de dados.
+
+# A pasta pages, contém o index.html que é a pagina inicial, contém também as rotas da api onde acessa o banco de dados
 
 #Banco de dados
 Utilizado a DigitalOcean (pago)
 Aiven (gratuito)
 Neon (gratuito - ambiente de homologação)
- 
