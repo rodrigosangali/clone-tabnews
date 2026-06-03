@@ -1,4 +1,4 @@
-name: Linting EsLint
+name: Linting EsLinting
 
 on: pull_request
 

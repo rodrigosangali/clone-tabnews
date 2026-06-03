@@ -1,4 +1,4 @@
-name: Automated Linting
+name: Linting Prettier
 
 on: pull_request
 
