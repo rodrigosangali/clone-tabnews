@@ -1,4 +1,4 @@
-name: Automated EsLinting
+name: Linting EsLint
 
 on: pull_request
 
