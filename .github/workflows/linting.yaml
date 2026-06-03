@@ -1,4 +1,4 @@
-name: Automated EsLinting
+name: Linting commitLint
 
 on: pull_request
 
