@@ -1,5 +1,6 @@
 import database from "infra/database.js";
 import orchestrator from "tests/orchestrator";
+import path from "node:path";
 
 // console.log("query no banco:", database.query("SELECT 1+1;"));
 
@@ -19,7 +20,9 @@ test("GET to /api/v1/migrations should return 200", async () => {
   expect(responseBody).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
-        path: "infra/migrations/1770380448925_create-second-test.js",
+        path: path.resolve(
+          "infra/migrations/1770380448925_create-second-test.js",
+        ),
       }),
     ]),
   );
