@@ -20,7 +20,9 @@ test("GET to /api/v1/migrations should return 200", async () => {
   expect(responseBody).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
-        path: path.resolve("infra/migrations/1770380448925_create-second-test.js"),
+        path: path.resolve(
+          "infra/migrations/1770380448925_create-second-test.js",
+        ),
       }),
     ]),
   );
