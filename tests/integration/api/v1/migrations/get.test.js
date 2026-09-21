@@ -9,21 +9,26 @@ beforeAll(async () => {
   await database.query("drop schema public cascade; create schema public");
 });
 
-test("GET to /api/v1/migrations should return 200", async () => {
-  const response = await fetch("http://localhost:3000/api/v1/migrations");
-  expect(response.status).toBe(200);
+describe("GET /api/v1/migrations", () => {
+  describe("Anonymous user", () => {
 
-  const responseBody = await response.json();
+    test("Running pending migrations", async () => {
+      const response = await fetch("http://localhost:3000/api/v1/migrations");
+      expect(response.status).toBe(200);
 
-  expect(Array.isArray(responseBody)).toBe(true);
-  expect(responseBody.length).toBeGreaterThan(0);
-  expect(responseBody).toEqual(
-    expect.arrayContaining([
-      expect.objectContaining({
-        path: path.resolve(
-          "infra/migrations/1770380448925_create-second-test.js",
-        ),
-      }),
-    ]),
-  );
+      const responseBody = await response.json();
+
+      expect(Array.isArray(responseBody)).toBe(true);
+      expect(responseBody.length).toBeGreaterThan(0);
+      expect(responseBody).toEqual(
+        expect.arrayContaining([
+          expect.objectContaining({
+            path: path.resolve(
+              "infra/migrations/1770380448925_create-second-test.js",
+            ),
+          }),
+        ]),
+      );
+    });
+  });
 });
