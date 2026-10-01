@@ -16,3 +16,15 @@ localizado na pasta infra, responsável por subir o banco de dados.
 Utilizado a DigitalOcean (pago)
 Aiven (gratuito)
 Neon (gratuito - ambiente de homologação)
+
+#CI/CD
+O projeto utiliza o Github Actions para realizar o CI/CD, onde é feito o build do projeto
+
+eslint.yaml - Roda o lint:eslint:check no pull request, para verificar se o código está de acordo com as regras do eslint (qualidade).
+O comando lint:eslint:check esta no script do package.json.
+
+lint.yaml - Roda o lint:prettier:check no pull request, para verificar se o código está de acordo com as regras do prettier (estilo).
+
+linting.yaml - Roda o commitLint no pull request, para verificar se o commit está de acordo com as regras do commitLint (padronização).
+
+test.yaml - Roda o lint:jest:check no pull request, para verificar se o código está de acordo com as regras do jest (testes).
