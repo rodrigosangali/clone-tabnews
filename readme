@@ -20,7 +20,7 @@ Neon (gratuito - ambiente de homologação)
 #CI/CD
 O projeto utiliza o Github Actions para realizar o CI/CD, onde é feito o build do projeto
 
-eslint.yaml - Roda o lint:eslint:check no pull request, para verificar se o código está de acordo com as regras do eslint (qualidade). 
+eslint.yaml - Roda o lint:eslint:check no pull request, para verificar se o código está de acordo com as regras do eslint (qualidade).
 O comando lint:eslint:check esta no script do package.json.
 
 lint.yaml - Roda o lint:prettier:check no pull request, para verificar se o código está de acordo com as regras do prettier (estilo).
