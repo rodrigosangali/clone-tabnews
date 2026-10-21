@@ -41,5 +41,10 @@ function UpdateAt() {
     );
   }
 
-  return <div>{database_info} </div>;
+  return (
+    <>
+      <h2> Database </h2>
+      <div>{database_info} </div>;
+    </>
+  );
 }
