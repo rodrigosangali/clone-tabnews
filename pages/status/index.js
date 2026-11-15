@@ -44,7 +44,7 @@ function UpdateAt() {
   return (
     <>
       <h2> Database </h2>
-      <div>{database_info} </div>;
+      <div>{database_info} </div>
     </>
   );
 }

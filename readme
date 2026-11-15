@@ -15,7 +15,7 @@ localizado na pasta infra, responsável por subir o banco de dados.
 #Banco de dados
 Utilizado a DigitalOcean (pago)
 Aiven (gratuito)
-Neon (gratuito - ambiente de homologação)
+Neon (gratuito - Estou utilizando esse, esta em pé desde 25-12-25, https://neon.com/)
 
 #CI/CD
 O projeto utiliza o Github Actions para realizar o CI/CD, onde é feito o build do projeto
